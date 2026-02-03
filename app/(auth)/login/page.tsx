@@ -1,0 +1,25 @@
+
+import LogInForm from "@/components/auth/login"
+import ArrowBackUpIcon from "@/components/ui/icons/arrow-back-up-icon"
+
+const LogInPage = () => {
+	return (
+		<div className="p-6 z-10 relative min-h-screen px-40 h-screen flex flex-col items-center justify-center"
+			style={{
+				background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #475569 100%)",
+			}}
+		>
+			<div className="container mx-auto relative ">
+				<div className="border w-12 h-fit flex items-center justify-center p-2 rounded mb-14 hover:rounded-full transition-border hover:border-dashed cursor-pointer transition-transform ease-in-out hover:scale-110">
+					<ArrowBackUpIcon />
+				</div>
+				<h1 className="text-4xl font-bricolage font-bold my-2 ">Log in to build <br /> something impressive</h1>
+				<span className="font-manrope uppercase text-sm">Not just a resume. A digital identity.</span>
+				<LogInForm />
+			</div>
+		</div>
+	)
+}
+
+
+export default LogInPage

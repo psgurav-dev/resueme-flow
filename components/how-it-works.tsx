@@ -3,14 +3,9 @@ import { FileUpload } from "./ui/file-upload";
 import { parseResume } from "@/services/gemini-ai";
 import { PortfolioData } from "@/templates/types";
 
-import { testSampleData } from "@/data/test";
-import dynamic from 'next/dynamic';
-import ModernCompact from "@/templates/modern-compact";
 import ModernTheme from "@/templates/modern-1";
-import { HoverBorderGradient, HoverBorderGradientDemo } from "./ui/hover-button";
+import { HoverBorderGradient } from "./ui/hover-button";
 import { SquareArrowOutUpRight } from "lucide-react";
-
-const PdfViewer = dynamic(() => import('@/components/PdfViewer'), { ssr: false });
 
 
 const HowItWorks = () => {
@@ -94,11 +89,13 @@ const HowItWorks = () => {
 
 		}
 	}
-	return <div className="font-manrope py-8  max-w-6xl mx-auto pb-4">
-		<h4 className="text-4xl font-bold text-gray-300 font-bricolage">How It Works</h4>
-		<div className="flex items-center gap-x-2 my-4">
-			<hr className="rotate-90 w-4 text-white" />
-			<span className="font-bricolage text-sm font-light italic text-white before">Make it feel effortless.</span>
+	return <div className="font-manrope py-8  max-w-6xl mx-auto pb-4 h-[calc(100vh-200px)] flex flex-col items-start justify-evenly">
+		<div>
+			<h4 className="text-4xl font-bold text-black font-bricolage">How It Works</h4>
+			<div className="flex items-center gap-x-2 my-4">
+				<hr className="rotate-90 w-4 text-gray-800" />
+				<span className="font-bricolage text-sm font-light italic text-gray-700">Make it feel effortless.</span>
+			</div>
 		</div>
 		{error && <p className="text-red-500 mb-4">{error}</p>}
 		{data ?
@@ -122,9 +119,6 @@ const PortfolioReady = ({ portfolioJSON, file }: { portfolioJSON: PortfolioData,
 			<div className="bg-black/40 h-125 overflow-y-auto border border-gray-400 rounded-2xl group hide-scrollbar">
 				<ModernTheme data={portfolioJSON} />
 			</div>
-			{/* <button className="bg-radial-[at_25%_25%] from-white to-zinc-900 to-25% h-10 font-manrope text-white px-12 py-2 text-sm rounded-lg font-bold hover:bg-gray-800 transition-colors text-center cursor-pointer mx-auto my-8">
-				Get Your Link
-			</button> */}
 			<div className="my-4 mx-auto  flex items-center justify-center">
 				<HoverBorderGradient
 					containerClassName="rounded-full"

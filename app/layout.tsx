@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Bricolage_Grotesque, Manrope } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -31,10 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${sans.variable} ${bricolage.variable} ${manrope.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${sans.variable} ${bricolage.variable} ${manrope.variable} antialiased bg-white `}>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
