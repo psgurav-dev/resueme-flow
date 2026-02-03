@@ -89,7 +89,7 @@ const HowItWorks = () => {
 
 		}
 	}
-	return <div className="font-manrope py-8  max-w-6xl mx-auto pb-4 h-[calc(100vh-200px)] flex flex-col items-start justify-evenly">
+	return <div className="font-manrope py-8 px-2 md:px-0  max-w-6xl mx-auto pb-4 h-[calc(100vh-200px)] flex flex-col items-start justify-evenly">
 		<div>
 			<h4 className="text-4xl font-bold text-black font-bricolage">How It Works</h4>
 			<div className="flex items-center gap-x-2 my-4">

@@ -84,7 +84,7 @@ export const FileUpload = ({
 						<p className="relative z-20 font-manrope font-bold text-neutral-700 dark:text-neutral-300 text-base">
 							Upload file
 						</p>
-						<p className="relative z-20 font-manrope font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2">
+						<p className="relative z-20 font-manrope text-center font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2">
 							Drag or drop your files here or click to upload
 						</p>
 						<div className="relative w-full  max-w-xl mx-auto">

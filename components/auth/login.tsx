@@ -22,7 +22,7 @@ const LoginForm = () => {
 		<form
 			ref={form}
 			onSubmit={handleSubmit}
-			className="flex flex-col items-center justify-center gap-8 w-125 px-6 py-12 border border-gray-300 rounded-lg drop-shadow-2xl bg-black/80 mt-6 font-bricolage">
+			className="flex flex-col items-center justify-center gap-8 md:w-125 px-6 py-12 border border-gray-300 rounded-lg drop-shadow-2xl bg-black/80 mt-6 font-bricolage">
 			<div className="flex items-center w-full  px-0">
 				<input type="text"
 					className="px-4 text-white placeholder:text-gray-500 border border-gray-200  p-2 border-dashed  w-full"
