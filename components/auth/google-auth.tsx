@@ -7,12 +7,12 @@ import { useRef } from "react";
 
 export default function GoogleLogin() {
 	const googleLoginButtonRef = useRef<any>(null);
-	
+
 	const loginWithGoogle = () => {
 		account.createOAuth2Session(
 			OAuthProvider.Google,
-			"http://localhost:3000/",
-			"http://localhost:3000/auth/callback"
+			`${process.env.NEXT_PUBLIC_HOST_URL}/`,
+			`${process.env.NEXT_PUBLIC_HOST_URL}/auth/callback`
 		);
 	};
 	return (
